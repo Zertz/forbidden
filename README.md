@@ -12,7 +12,7 @@ npm i forbidden --save
 const forbidden = require('forbidden')
 const router = require('express').Router()
 
-router.use('/path', forbidden('delete')
+router.use('/path', forbidden('delete'))
 
 // DELETE /path 403 (Forbidden)
 ```
