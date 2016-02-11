@@ -1,0 +1,55 @@
+{
+  "name": "forbidden",
+  "version": "0.1.0",
+  "description": "Middleware to return 403 (Forbidden) on the specified HTTP method.",
+  "main": "./lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "standard",
+    "compile": "babel src -d lib",
+    "prepublish": "npm test",
+    "pretest": "npm run lint && npm run compile",
+    "test": "mocha --compilers js:babel-core/register -R spec ./test"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.4.0",
+    "babel-preset-es2015": "^6.3.0",
+    "mocha": "^2.3.0",
+    "standard": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zertz/forbidden.git"
+  },
+  "keywords": [
+    "connect",
+    "express",
+    "middleware",
+    "403",
+    "http",
+    "status"
+  ],
+  "author": "Pier-Luc Gendreau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zertz/forbidden/issues"
+  },
+  "homepage": "https://github.com/Zertz/forbidden#readme",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/"
+  ],
+  "standard": {
+    "ignore": [
+      "lib"
+    ],
+    "globals": [
+      "describe",
+      "it"
+    ]
+  }
+}
